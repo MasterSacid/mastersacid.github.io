@@ -1,0 +1,64 @@
+/* Sticky Note Container */
+.quote-container {
+    position: absolute;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.note1 {
+    bottom: 5%;
+    left: 10%;
+    transform: rotate(-10deg);
+}
+.note1:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+.note2 {
+    top: 5%;
+    left: 35%;
+    transform: rotate(10deg);
+}
+.note2:hover {
+    transform: rotate(7deg) scale(1.05);
+}
+
+
+.quote-container:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* Note Styling */
+.note {
+    color: #333;
+    position: relative;
+    width: 250px; /* Slightly smaller to fit your layout */
+    padding: 20px;
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    background: rgba(234, 230, 114, 0.85); /* Slightly transparent */
+    box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 3px;
+}
+
+.blue {
+    background: rgba(135, 206, 235, 0.9); /* Sky blue */
+}
+
+/* You can add more color variations */
+.pink {
+    background: rgba(255, 182, 193, 0.9);
+}
+
+.green {
+    background: rgba(152, 251, 152, 0.9);
+}
+
+.note .author {
+    display: block;
+    margin: 20px 0 0 0;
+    text-align: right;
+    font-size: 18px;
+    color: #666;
+}
+
