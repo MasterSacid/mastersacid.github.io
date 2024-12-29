@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('../pictures/birb3.jpeg'); /* Add your image path here */
+    background-image: url('../../pictures/birb3.jpeg'); /* Add your image path here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body::before {
     width: 87%; /* Adjust this to make the white area wider or narrower */
     height: calc(100% - 200px); /* Adjust based on your header/banner height */
     margin: 0% auto; /* 50px space at top and bottom, auto centers horizontally */
-    background-color: rgba(255,255,255,0.9); /*dont change this !!!!11!)
+    background-color: rgba(255,255,255,0.7); /*dont change this !!!!11!)
     /* Add subtle shadow for depth */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto; /* Enable vertical scrolling */
@@ -143,13 +143,6 @@ body::before {
     padding: 8px 12px;
     font-size: 0.9rem;
 }
-
-
-
-/* Content Paragraphs */
-
-
-
 
 p {
 
