@@ -1,0 +1,137 @@
+.tab-bar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    margin: 0;
+    overflow-x: auto; /* allows horizontal scrolling if too many tabs */
+    -webkit-overflow-scrolling: touch;
+    position: relative;    /* Added */
+    z-index: 10;           /* Ensure it sits above overlay */
+    border-bottom: none;
+    padding-top: 8px;
+
+}
+
+.tab-bar .tab {
+    flex: 0 0 auto;
+    color: #ddd;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #444;
+    margin: 0 2px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    line-height: 1;
+    display: inline-block;
+    border: 1px solid #222;
+    border-bottom: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-bar .tab:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.tab-bar .active-tab {
+    background-color: #222;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+@media (max-width: 600px) {
+    .tab-bar .tab {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+.browser-container {
+    /* The background setup begins here */
+    background-image: url('../../pictures/history.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width: 95%;
+    max-width: 1400px;
+    height: calc(100vh - 40px);
+    /*background-attachment: fixed;*/
+    background-color: #1c1c1c;
+    /*border-radius: 8px 8px 0 0;*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    /*margin: 20px auto;*/
+    z-index: 100;
+
+}
+
+.browser-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.browser-header {
+    background-color: #2d2d2d;
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.browser-controls {
+    display: flex;
+    gap: 6px;
+    margin-left: 10px;
+    align-items: center; /* Butonları dikey olarak ortalar */
+    position: relative;  /* Eklendi */
+    z-index: 1000;      /* Eklendi - Yüksek bir z-index değeri */
+}
+
+.browser-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    display: block; /* inline-block yerine block kullanalım */
+    text-decoration: none; /* link alt çizgisini kaldırır */
+}
+
+.browser-button.close {
+    background-color: #ff5f56;
+    cursor: pointer; /* Tıklanabilir olduğunu gösterir */
+    transition: opacity 0.2s; /* Hover efekti için yumuşak geçiş */
+}
+
+
+.browser-button.close:hover {
+    opacity: 0.8;
+}
+
+
+
+
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+/* Hover efekti ekleyelim */
+.browser-button.close:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.banner {
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #1c1c1c;
+}
