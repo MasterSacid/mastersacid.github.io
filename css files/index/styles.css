@@ -15,28 +15,7 @@ body {
                    font-style: normal;
                }
 
-/* Swipes up the lockscreen as soon as loaded in the page (attributions of that) */
-#lock-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../bg.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1000;
-    animation: swipeUp 0.5s ease-in forwards;
-}
-/* Swipe Up Animation */
-@keyframes swipeUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
+
 
 /* Made to place the background behind everything. */
 #main-content {
@@ -141,30 +120,6 @@ body {
     z-index: 2;
 }
 
-/* Adding the same gradient effect as app icons on hover */
-/*
-.grid-header:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: 400%;
-    z-index: 1;
-    filter: blur(5px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 15px;
-}
-
-.grid-header:hover:before {
-    opacity: 1;
-}
-*/
-
 .app-icon {
     display: flex;
     flex-direction: column;
@@ -175,9 +130,10 @@ body {
     z-index: 0;
     cursor: pointer;
     transition: transform 0.3s ease; /* Add transition for smooth scaling */
-    /*border: 1px dashed rgba(255, 255, 255, 0.3); /* this adds borders you can comment it out later if you dont wanna use them */
+    /*border: 1px dashed rgba(255, 255, 255, 0.3); /* this adds borders I commented it out later just in case if I wanted to use them */
 }
 
+/* this is for rainbowish effect */
 .app-icon:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -188,8 +144,8 @@ body {
     background-size: 400%;
     z-index: 1;
     filter: blur(5px);
-    width: calc(60px);  /* Match the icon width  */
-    height: calc(60px); /* Match icon height */
+    width: calc(60px);  /* Should be same as the icon width */
+    height: calc(60px); /* Should be same as the icon height */
     animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out,transform .3s ease;
@@ -229,14 +185,14 @@ body {
 }
 
 
-
+/* this ignites the rainbows */
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
 
-/* Optional: Add a smooth scale effect when clicking */
+/*Smooth scale effect when clicking */
 .app-icon:active img {
     transform: scale(0.95);
     transition: transform 0.1s ease;
@@ -252,7 +208,7 @@ body {
     z-index: 2;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+    transition: transform 0.3s ease;
 
 }
 
