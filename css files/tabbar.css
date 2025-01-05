@@ -5,7 +5,7 @@
     margin: 0;
     overflow-x: auto; /* allows horizontal scrolling if too many tabs */
     -webkit-overflow-scrolling: touch;
-    position: relative;    /* Added */
+    position: relative;
     z-index: 10;           /* Ensure it sits above overlay */
     border-bottom: none;
     padding-top: 8px;
@@ -110,8 +110,8 @@
 
 .browser-button.close {
     background-color: #ff5f56;
-    cursor: pointer; /* Tıklanabilir olduğunu gösterir */
-    transition: opacity 0.2s; /* Hover efekti için yumuşak geçiş */
+    cursor: pointer; /* Tıklanabilir*/
+    transition: opacity 0.2s;
 }
 
 
